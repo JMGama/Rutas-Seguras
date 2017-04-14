@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="primary">
+	  <ion-buttons left>
+      <button ion-button menuToggle icon-only><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons> 
+    <ion-title text-center>
+      Rutas Seguras
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="calculateAndDisplayRoute()" icon-only><ion-icon name="walk"></ion-icon></button>
+    </ion-buttons>  
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content overflow-scroll="false">
+  <div #map id="map"></div>
+  <div id="search">
+    <ion-row>
+      <ion-item color="no-color" id="searchBox">
+        <ion-label color="primary" id="searchLabel">Buscar:</ion-label>
+        <ion-input #places id="places" type="text" name="search"></ion-input>
+      </ion-item>
+    </ion-row>
+  </div>
+  <div id="locate">
+	<ion-buttons> 
+      <button ion-button (click)="locate()" clear icon-only><ion-icon class="iconGrande" ios="ios-locate-outline" name="locate"></ion-icon></button>
+	</ion-buttons> 
+  </div>
+</ion-content>
